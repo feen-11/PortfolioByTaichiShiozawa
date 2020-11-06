@@ -6,7 +6,7 @@ require_once(__DIR__ . '/../Model/User.php');
 
 
 class UserShow extends Controller{
-
+// リダイレクト
   public function run() {
     if (!$this->loginCheck()) {
       // login

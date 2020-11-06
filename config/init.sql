@@ -1,9 +1,10 @@
+-- データベース構築
 create database YourFitness;
 grant all on YourFitness.* to dbuser@localhost identified by 'd7fg05ki';
 
 use YourFitness;
 
-
+-- テーブル作成
 create table users (
   userId int not null auto_increment primary key,
   email varchar(191),

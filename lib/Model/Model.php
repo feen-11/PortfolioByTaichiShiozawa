@@ -9,6 +9,7 @@ class Model{
   public $dbh;
   public function __construct(){
     try {
+//       データベース接続
       $db = parse_url($_SERVER['CLEARDB_DATABASE_URL']);
       $db['dbname'] = ltrim($db['path'], '/');
       $dsn = "mysql:host={$db['host']};dbname={$db['dbname']};charset=utf8";
@@ -25,7 +26,7 @@ class Model{
       exit;
     }
   }
-  
+//   ログイン日時のチェック
   public function checkLoginDate(){
     $sql = "select loginDay from logindateinfo where loginDay = :loginDay and userId = :userId ";
     $stmt = $this->dbh->prepare($sql);
@@ -36,8 +37,9 @@ class Model{
     $res = $stmt->fetch(\PDO::FETCH_ASSOC);
     return $res;
   }
-
+// ログイン日時の記録
   public function postLoginDate(){
+//     その日初めてのログインなら新しく日時の記録
     $res = $this -> checklogindate();
     if($res === false){
       $sql = "insert into logindateInfo (loginDay, dayWeight, userId) values (:loginDay, :dayWeight, :userId)";
@@ -58,7 +60,7 @@ class Model{
         ]);
     }
   }
-
+// ログイン日時の取得（投稿表示の際に使いました）
     public function getLoginDate(){
       $sql = "select * from logindateinfo where userId = :userId order by loginDay desc";
       $stmt = $this->dbh->prepare($sql);

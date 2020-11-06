@@ -6,16 +6,19 @@
 
 **ディレクトリ構造目次**  
 
-config - config.php(定数管理や細かな設定ファイル)  
-       - init.sql (データベース構造)  
+config  
+- config.php(定数管理や細かな設定ファイル)  
+- init.sql (データベース構造)  
        
-lib    - Controller(コントローラー)  
-       - Model(モデル)  
-       - Exception(例外処理)  
+lib  
+- Controller(コントローラー)  
+- Model(モデル)  
+- Exception(例外処理)  
        
-public_html - images(画像ファイル)  
-            - ○○○.php(ビュー：各ページのhtmlファイル)  
-            - styles.css(スタイリング)  
+public_html  
+- images(画像ファイル)  
+- ○○○.php(ビュー：各ページのhtmlファイル)  
+- styles.css(スタイリング)  
 
 **バックエンド要素**  
 ・PHPによる動的webサイトの作成  

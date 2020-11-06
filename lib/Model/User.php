@@ -31,10 +31,6 @@ class User extends Model{
   }
 
   public function setUp(){
-    // $age = $_POST['age'];
-    // $height = $_POST['height'];
-    // $weight = $_POST['weight'];
-    // $userId = $_SESSION['me']['userId'];
     $sql = "update users set age = :age, sex = :sex, height = :height, weight = :weight, nowWeight =     :nowWeight, updated = now() where userId = :userId";
     $stmt = $this->dbh->prepare($sql);
     $stmt->execute([

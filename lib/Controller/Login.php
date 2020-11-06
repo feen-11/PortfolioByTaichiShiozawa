@@ -16,7 +16,8 @@ class Login extends Controller{
       $this->loginProcess();
     }
   }
-
+  
+// ログイン処理
   public function loginProcess(){
     
     try{
@@ -50,7 +51,7 @@ class Login extends Controller{
       }
     }
   }
-
+// POSTの中身チェック
   public function validate(){
     if(!isset($_POST['token']) || $_POST['token'] !== $_SESSION['token']){
       throw new InvalidToken();

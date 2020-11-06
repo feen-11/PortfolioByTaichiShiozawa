@@ -13,6 +13,7 @@ class Controller {
     $this->values = new \stdClass();
   } 
 
+//   基礎代謝計算
   public function generateMetabolism(){
     if($_SESSION['me']['sex'] === '男性'){
       $metabo = round(13.397 * $_SESSION['me']['nowWeight'] + 4.799 * $_SESSION['me']['height'] - 5.677 *  $_SESSION['me']['age'] +  88.362, 0);
@@ -22,17 +23,20 @@ class Controller {
       return $metabo;
     }
   }
-
+// ログインチェック
   protected function loginCheck() {
     return isset($_SESSION['me']) && !empty($_SESSION['me']);
   }
+// 初期設定チェック①
   protected function setUpCheck() {
     return isset($_SESSION['me']['weight']) && !empty($_SESSION['me']['weight']);
   }
+// 初期設定チェック①
   protected function startCheck() {
     return isset($_SESSION['me']['goalWeight']) && !empty($_SESSION['me']['goalWeight']);
   }
-
+  
+// エラー管理
   protected function setErrors($key, $error) {
     $this->errors->$key = $error;
   }

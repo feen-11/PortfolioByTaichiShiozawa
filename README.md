@@ -4,7 +4,7 @@
 
 # Link
 - [「YourFitness」について](##「YourFitness」)
-- [使い方](#使い方)
+- [開発に至った経緯](#開発に至った経緯)
 
 ## README
 

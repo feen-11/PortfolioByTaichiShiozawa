@@ -21,7 +21,7 @@ class UserEdit extends Controller{
       $this->userEditProcess();
     }
   }
-
+// 投稿処理
   public function userEditProcess(){
     try{
       $this->validate();
@@ -51,7 +51,7 @@ class UserEdit extends Controller{
       header('Location: SITE_URL');
     }
   }
-
+// POST中身チェック
   public function validate(){
     if(!isset($_POST['token']) || $_POST['token'] !== $_SESSION['token']){
       throw new InvalidToken();

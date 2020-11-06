@@ -5,7 +5,7 @@ require_once(__DIR__ . '/../Exception/ExistsEmail.php');
 require_once(__DIR__ . '/../Exception/UnmatchEmailOrPassword.php');
 
 class User extends Model{
-
+// ユーザー登録
   public function userCreate(){
       $sql = "insert into users (email, name, password, created, updated) values (:email, :name, :password, now(), now())";
       $stmt = $this->dbh->prepare($sql);
@@ -15,7 +15,7 @@ class User extends Model{
         ':password' => password_hash($_POST['password'], PASSWORD_DEFAULT)
       ]);
   }
-
+// ログイン処理
   public function login(){
     $sql = 'select * from users where email = :email';
     $stmt = $this->dbh->prepare($sql);
@@ -29,7 +29,7 @@ class User extends Model{
         throw new UnmatchEmailOrPassword();
       }
   }
-
+// 初期設定①
   public function setUp(){
     $sql = "update users set age = :age, sex = :sex, height = :height, weight = :weight, nowWeight =     :nowWeight, updated = now() where userId = :userId";
     $stmt = $this->dbh->prepare($sql);
@@ -46,7 +46,7 @@ class User extends Model{
     $this->updateSESSION();
 
   }
-
+//   初期設定②
   public function setGoal(){
     $sql = 'update users set declaration = :declaration, goalWeight = :goalWeight, updated = now() where userId = :userId';
     $stmt = $this->dbh->prepare($sql);
@@ -59,7 +59,7 @@ class User extends Model{
     // セッションの更新
     $this->updateSESSION();
     }
-
+// 体重記録処理
   public function postWeight(){
     $sql = "update users set nowWeight = :nowWeight, updated = now() where userId = :userId";
     $stmt = $this->dbh->prepare($sql);
@@ -73,7 +73,7 @@ class User extends Model{
     $model->postLoginDate();
   }
   
-
+// ユーザー情報編集
   public function userEdit(){
     $sql = "update users set name = :name, email = :email, age = :age, height = :height, weight = :weight, nowWeight = :nowWeight, goalWeight = :goalWeight, declaration = :declaration, updated = now() where userId = :userId";
     $stmt = $this->dbh->prepare($sql);
@@ -102,7 +102,7 @@ class User extends Model{
     ]);
     return $stmt->fetch(\PDO::FETCH_ASSOC);
   }
-
+// セッション更新処理
   public function updateSESSION(){
     $sql = "select * from users where userId = :userId";
     $stmt = $this->dbh->prepare($sql);

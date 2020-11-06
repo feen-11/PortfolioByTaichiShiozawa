@@ -23,7 +23,8 @@ class SetUp extends Controller{
       $this->setUpProcess();
     }
   }
-
+  
+// 投稿処理
   public function setUpProcess(){
     // validate()
     try{

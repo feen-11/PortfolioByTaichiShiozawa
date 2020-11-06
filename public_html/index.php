@@ -5,22 +5,12 @@ require_once(__DIR__ . '/../config/config.php');
 
 $app = new Index();
 $app->run();
-
-// var_dump($_SESSION['me']);
-
 $posts = $app->readPosts();
 $foods = $app->readFoods();
 $trainings = $app->readTrainings();
 $loginDateInfo = $app->readLoginTimes();
 $intakeCalorie = $app->totalIntakeCalorie();
 $burnCalorie = $app->totalBurnCalorie();
-// var_dump($posts);
-// var_dump($foods);
-// var_dump($trainings);
-// var_dump($intakeCalorie);
-// echo '<br>';
-// var_dump($created = $app->readLoginTimes());
-// var_dump($loginDateInfo);
 
 ?>
 
@@ -73,7 +63,7 @@ $burnCalorie = $app->totalBurnCalorie();
         <div class= "day">
         <div class="text-center">
           <h3><?php echo date('Y年m月d日',  strtotime($loginDateInfo[$i]['loginDay'])); ?></h3>
-          </div>  
+        </div>  
           <div class="post">
             <div class="intake post-block">
               <h4><i class="fas fa-utensils"></i>食事</h4>

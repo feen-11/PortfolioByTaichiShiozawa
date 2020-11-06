@@ -1,6 +1,6 @@
--- データベース構築
+-- データベース構築()
 create database YourFitness;
-grant all on YourFitness.* to dbuser@localhost identified by 'd7fg05ki';
+grant all on YourFitness.* to dbuser@localhost identified by '********';
 
 use YourFitness;
 

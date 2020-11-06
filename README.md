@@ -72,9 +72,9 @@
 
 
 ## 使用した言語   
-PHP 7.3.11  
-MySQL Ver 14.14  
-Bootstrap 4.5.2   
-HTML CSS  
-JavaScript  
+・PHP 7.3.11  
+・MySQL Ver 14.14  
+・Bootstrap 4.5.2   
+・HTML CSS  
+・JavaScript  
 

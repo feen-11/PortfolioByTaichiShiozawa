@@ -44,7 +44,7 @@
 
 **config**  
 - config.php(定数管理や細かな設定ファイル)  
-- init.sql (データベース構造)  
+- init.sql (データベース設定)  
        
 **lib**    
 - Controller(コントローラー)  

@@ -16,6 +16,7 @@ class Signup extends Controller{
     }
   }
   
+//   投稿処理
   public function signupProcess(){
 
     try{
@@ -43,7 +44,7 @@ class Signup extends Controller{
         header('Location: SITE_URL');
       }
   }
-
+// POST中身チェック
   public function validate(){
     if(!isset($_POST['token']) || $_POST['token'] !== $_SESSION['token']){
       throw new InvalidToken();

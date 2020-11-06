@@ -24,7 +24,7 @@ class Start extends Controller {
             $this->postProcess();
     }
   }
-
+// 投稿処理
     public function postProcess(){
         try{
           $this->validate();
@@ -46,13 +46,13 @@ class Start extends Controller {
               header('Location: ' . SITE_URL);
             }
           }
-
+// BMI計算
   public function generateBMI($height, $weight){
     $heightM = pow($height, 2) / 10000;
     // 小数点切り上げ
     return $bmi = round($weight / $heightM, 2);
   }
-
+// BMI別アドバイス
   public function diagnosisBMI($bmi){
     if($bmi < 18.5){
       return 'あなたのBMIは標準よりも小さく、痩せていると判定されました。肥満は健康の大敵ですが、もちろん痩せすぎも良くありません。普段から食欲がなかったり運動不足だったりする方は、きちんと食べて適度に運動するように心がけてください。';
@@ -64,7 +64,7 @@ class Start extends Controller {
       echo 'あなたのBMIは標準よりも高く、肥満気味であると判定されました。肥満はさまざまな生活習慣を引き起こす、健康の大敵です。食生活を見直し、適度な運動を取り入れて自己管理に努めてください。';
     }
   }
-
+// POST中身チェック
   public function validate(){
     if(!isset($_POST['token']) || $_POST['token'] !== $_SESSION['token']){
       throw new InvalidToken();

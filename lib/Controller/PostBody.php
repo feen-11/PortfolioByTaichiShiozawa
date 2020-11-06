@@ -25,7 +25,7 @@ class PostBody extends Controller {
             $this->postProcess();
     }
   }
-
+//   投稿処理
     public function postProcess(){
 
       try{
@@ -49,7 +49,7 @@ class PostBody extends Controller {
         exit;
     }
     
-
+// POST中身チェック
     public function validate(){
       if(!isset($_POST['token']) || $_POST['token'] !== $_SESSION['token']){
         throw new InvalidToken();

@@ -2,10 +2,10 @@
 お世話になっております。塩澤泰知と申します。今回はポートフォリオをご覧頂きありがとうございます。
 こちらはポートフォリオとして公開している「YourFitness」のソースコードです。  
 
-## App URL
+# App URL
 [YourFitness](yourfitness.herokuapp.com/index.php)
 
-# 目次
+## 目次
 - [「YourFitness」について](#yourfitness)
 - [機能一覧](#機能一覧)
 - [使用した技術](#使用した技術)

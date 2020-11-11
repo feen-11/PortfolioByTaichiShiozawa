@@ -29,10 +29,18 @@
 ・ユーザーログイン、サインアップ  
 
 ## 使用した技術   
-言語：PHP 7.3.11、 JavaScript、 HTML, CSS　
-DB：MySQL Ver 14.14  
-フレームワーク：Bootstrap 4.5.2   
-インフラ：Heroku
+**言語**  
+PHP 7.3.11  
+JavaScript  
+HTML,CSS　
+
+**DB**  
+MySQL Ver 14.14    
+**フレームワーク**  
+Bootstrap 4.5.2   
+
+**インフラ**  
+Heroku
 
 ## ディレクトリ構造目次  
 

@@ -45,16 +45,16 @@ Heroku
 
 ## ディレクトリ構造目次  
 
-**config**  
+**-config**  
 - config.php(定数管理や細かな設定ファイル)  
 - init.sql (データベース設定)  
        
-**lib**    
+**-lib**    
 - Controller(コントローラー)  
 - Model(モデル)  
 - Exception(例外処理)  
        
-**public_html**  
+**-public_html**  
 - images(画像ファイル)  
 - ○○○.php(ビュー：各ページのhtmlファイル)  
 - styles.css(スタイリング)  

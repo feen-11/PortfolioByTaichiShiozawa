@@ -35,7 +35,8 @@ JavaScript
 HTML,CSS　
 
 **DB**  
-MySQL Ver 14.14    
+MySQL Ver 14.14  
+
 **フレームワーク**  
 Bootstrap 4.5.2   
 

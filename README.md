@@ -3,7 +3,7 @@
 こちらはポートフォリオとして公開している「YourFitness」のソースコードです。  
 
 # App URL
-[YourFitness](yourfitness.herokuapp.com/login.php)
+[YourFitness](http://yourfitness.herokuapp.com/login.php)
 
 ## 目次
 - [「YourFitness」について](#yourfitness)

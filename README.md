@@ -2,7 +2,7 @@
 お世話になっております。塩澤泰知と申します。今回はポートフォリオをご覧頂きありがとうございます。
 こちらはポートフォリオとして公開している「YourFitness」のソースコードです。  
 
-#：globe_with_meridians： App URL
+# ：globe_with_meridians：  App URL
 [YourFitness](http://yourfitness.herokuapp.com/login.php)
 
 ## 目次

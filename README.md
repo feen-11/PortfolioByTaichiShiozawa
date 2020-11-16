@@ -1,3 +1,4 @@
+![FireShot Capture 008 - YourFitnessとは - YourFitness - yourfitness herokuapp com](https://user-images.githubusercontent.com/61722629/99252063-c22b1f00-2851-11eb-89a1-cce8fc7bffa4.png)
 # PortfolioByTaichiShiozawa
 お世話になっております。塩澤泰知と申します。今回はポートフォリオをご覧頂きありがとうございます。
 こちらはポートフォリオとして公開している「YourFitness」のソースコードです。  

@@ -20,7 +20,7 @@
 
 
 ## :muscle: 「YourFitness」  
-![yourfitness](https://user-images.githubusercontent.com/61722629/99350554-0b2ab400-28e2-11eb-80fb-a5d8e0327548.gif)
+![YourFitness](https://user-images.githubusercontent.com/61722629/99351700-7ffeed80-28e4-11eb-918a-482ec0d91445.gif)
 　今回開発した「YourFitness」は、毎日の食事やトレーニングを記録し**利用者のフィットネスライフを手助けするアプリケーション**です。また日記機能も実装しているので、その日のトレーニングや食事の反省点、良かった点などを書き出して今後に活用して頂けば幸いです。もちろんフィットネスに無関係な「こんな事があった！」といったようなことを日記にするなど自由に利用して頂けばと思います。
 
 ## :large_blue_diamond: 機能一覧

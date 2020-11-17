@@ -19,7 +19,7 @@
 - [開発を通しての成長](#smile-開発を通しての成長)  
 
 
-## ：gem： 概要  
+## :gem: 概要  
 
 <div align="center">
 <img src="https://user-images.githubusercontent.com/61722629/99351700-7ffeed80-28e4-11eb-918a-482ec0d91445.gif" alt="属性" title="タイトル">

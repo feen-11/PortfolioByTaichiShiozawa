@@ -22,7 +22,7 @@
 ## :muscle: 「YourFitness」  
 
 <div align="center">
-<img src="![YourFitness](https://user-images.githubusercontent.com/61722629/99351700-7ffeed80-28e4-11eb-918a-482ec0d91445.gif)" alt="属性" title="タイトル">
+<img src="https://user-images.githubusercontent.com/61722629/99351700-7ffeed80-28e4-11eb-918a-482ec0d91445.gif" alt="属性" title="タイトル">
 </div>
 　
  今回開発した「YourFitness」は、毎日の食事やトレーニングを記録し**利用者のフィットネスライフを手助けするアプリケーション**です。また日記機能も実装しているので、その日のトレーニングや食事の反省点、良かった点などを書き出して今後に活用して頂けば幸いです。もちろんフィットネスに無関係な「こんな事があった！」といったようなことを日記にするなど自由に利用して頂けばと思います。

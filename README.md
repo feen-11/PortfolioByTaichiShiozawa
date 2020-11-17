@@ -6,7 +6,7 @@
 [YourFitness](http://yourfitness.herokuapp.com/login.php)
 
 ## :bookmark: 目次
-- [概要](#muscle-概要)  
+- [概要](#gem-概要)  
 - [機能一覧](#large_blue_diamond-機能一覧)  
 - [使用した技術](#wrench-使用した技術 )  
 - [ディレクトリ構造](#house-ディレクトリ構造目次)  
@@ -19,7 +19,7 @@
 - [開発を通しての成長](#smile-開発を通しての成長)  
 
 
-## ：宝石： 概要  
+## ：gem： 概要  
 
 <div align="center">
 <img src="https://user-images.githubusercontent.com/61722629/99351700-7ffeed80-28e4-11eb-918a-482ec0d91445.gif" alt="属性" title="タイトル">

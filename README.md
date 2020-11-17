@@ -6,9 +6,9 @@
 [YourFitness](http://yourfitness.herokuapp.com/login.php)
 
 ## :bookmark: 目次
-- [「YourFitness」について](#yourfitness)
+- [「YourFitness」について](#muscle-yourfitness)
 - [機能一覧](#large_blue_diamond-機能一覧)
-- [使用した技術](#使用した技術)
+- [使用した技術](#wrench-使用した技術 )
 - [ディレクトリ構造](#ディレクトリ構造目次)  
 - [バックエンド要素](#バックエンド要素)
 - [フロントエンド要素](#フロントエンド要素) 

@@ -5,6 +5,11 @@
 # :globe_with_meridians: App URL
 [YourFitness](http://yourfitness.herokuapp.com/login.php)
 
+＊上記のサービスは、こちらの情報でログイン可能です。（ログインページにも記載しています。）  
+メールアドレス：test@gmail.com  
+パスワード：test  
+
+
 ## :bookmark: 目次
 - [概要](#gem-概要)  
 - [機能一覧](#large_blue_diamond-機能一覧)  

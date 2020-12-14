@@ -34,7 +34,7 @@ $burnCalorie = $app->totalBurnCalorie();
         </div>
         <div class="header-right d-flex justify-content-end col-xs-12 col-md-6">
           <div class="login-user col-xs-8">
-            <p><i class="fas fa-user"></i><a href="userShow.php"> <?php echo h( $_SESSION['me']['name']) ?></a></p>
+            <p><i class="fas fa-user"></i><a href="userShow.php"> <?= h( $_SESSION['me']['name']) ?></a></p>
           </div>
           <div class="logout col-xs-4">
             <form action="logout.php" method="post" id="logout">
@@ -62,7 +62,7 @@ $burnCalorie = $app->totalBurnCalorie();
           <?php for($i = 0; $i < count($loginDateInfo) ; $i++) :?>
         <div class= "day">
         <div class="text-center">
-          <h3><?php echo h(date('Y年m月d日',  strtotime($loginDateInfo[$i]['loginDay']))); ?></h3>
+          <h3><?= h(date('Y年m月d日',  strtotime($loginDateInfo[$i]['loginDay']))); ?></h3>
         </div>  
           <div class="post">
             <div class="intake post-block">
@@ -72,7 +72,7 @@ $burnCalorie = $app->totalBurnCalorie();
                   <p class="timeflame">朝食</p>
                       <?php foreach($foods as $food) :?>
                         <?php if($food['created'] === $loginDateInfo[$i]['loginDay'] && $food['timeflame'] === '朝食' && $food['foodName'] ==! ''):?>
-                          <p class="post-info"><?php echo h($food['foodName'])?>：<?php echo h($food['calorie'])?>kcal</p>
+                          <p class="post-info"><?= h($food['foodName'])?>：<?= h($food['calorie'])?>kcal</p>
                           <?php endif ;?>
                           <?php endforeach ;?>
                 </div>
@@ -80,7 +80,7 @@ $burnCalorie = $app->totalBurnCalorie();
                       <p class="timeflame">昼食</p>  
                       <?php foreach($foods as $food) :?>
                         <?php if($food['created'] === $loginDateInfo[$i]['loginDay'] && $food['timeflame'] === '昼食' && $food['foodName'] ==! '') :?>
-                          <p class="post-info"><?php echo h($food['foodName'])?>：<?php echo h($food['calorie'])?>kcal</p>
+                          <p class="post-info"><?= h($food['foodName'])?>：<?= h($food['calorie'])?>kcal</p>
                           <?php endif ;?>
                           <?php endforeach ;?>
                 </div>
@@ -88,36 +88,36 @@ $burnCalorie = $app->totalBurnCalorie();
                           <p class="timeflame">夕食</p>
                           <?php foreach($foods as $food) :?>
                             <?php if($food['created'] === $loginDateInfo[$i]['loginDay'] && $food['timeflame'] === '夕食' && $food['foodName'] ==! '') :?>
-                              <p class="post-info"><?php echo h($food['foodName'])?>：<?php echo h($food['calorie'])?>kcal</p>
+                              <p class="post-info"><?= h($food['foodName'])?>：<?= h($food['calorie'])?>kcal</p>
                               <?php endif ;?>
                               <?php endforeach ;?>
                 </div>
               </div>
               <div class="row total-intake d-flex justify-content-end">
-                <p class="total-calorie">合計摂取カロリー：<?php echo isset($intakeCalorie[$i]['totalIntakeCalorie'])? h($intakeCalorie[$i]['totalIntakeCalorie']) : '0'?>kcal</p>
+                <p class="total-calorie">合計摂取カロリー：<?= isset($intakeCalorie[$i]['totalIntakeCalorie'])? h($intakeCalorie[$i]['totalIntakeCalorie']) : '0'?>kcal</p>
               </div>
             </div>
             <h4><i class="fas fa-running training-title"></i>トレーニング</h4>  
             <div class="training post-block">
                 <?php foreach($trainings as $training) :?>
                   <?php if($training['created'] === $loginDateInfo[$i]['loginDay'] && $training['trainingName'] ==! '') :?>
-                    <p class="post-info"><?php echo h($training['trainingName'])?>：<?php echo h($training['burnCalorie'])?>kcal</p>
+                    <p class="post-info"><?= h($training['trainingName'])?>：<?= h($training['burnCalorie'])?>kcal</p>
                   <?php endif ;?>
                 <?php endforeach ;?>
                 <div class="row total-burn d-flex justify-content-end">
-                  <p class="total-calorie">合計消費カロリー：<?php echo isset($burnCalorie[$i]['totalBurnCalorie']) h(?$burnCalorie[$i]['totalBurnCalorie']) : '0'?>kcal</p>
+                  <p class="total-calorie">合計消費カロリー：<?= isset($burnCalorie[$i]['totalBurnCalorie']) h(?$burnCalorie[$i]['totalBurnCalorie']) : '0'?>kcal</p>
                 </div>
             </div>
             <h4><i class="fas fa-pencil-alt"></i>日記</h4>
             <div class="diary post-block">
                 <?php foreach($posts as $post) :?>
                   <?php if($post['created'] === $loginDateInfo[$i]['loginDay']) :?>
-                    <p class="post-info"><?php echo h($post['body'])?></p>
+                    <p class="post-info"><?= h($post['body'])?></p>
                   <?php endif ;?>
                 <?php endforeach ;?>
             </div>
               <div class="today-weight ">
-                <h4><i class="fas fa-dumbbell"></i>体重:<?php echo h($loginDateInfo[$i]['dayWeight'])?>kg</h4>
+                <h4><i class="fas fa-dumbbell"></i>体重:<?= h($loginDateInfo[$i]['dayWeight'])?>kg</h4>
               </div>
             </div>
           </div>

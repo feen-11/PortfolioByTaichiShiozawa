@@ -33,7 +33,7 @@ $bmi = $app->generateBMI($_SESSION['me']['height'], $_SESSION['me']['nowWeight']
         </div>
         <div class="header-right d-flex justify-content-end col-xs-12 col-md-6">
           <div class="login-user col-xs-8">
-            <li><i class="fas fa-user"></i><a href="userShow.php"> <?php echo h($_SESSION['me']['name']) ?></a></li>
+            <li><i class="fas fa-user"></i><a href="userShow.php"> <?= h($_SESSION['me']['name']) ?></a></li>
           </div>
           <div class="logout col-xs-4">
             <form action="logout.php" method="post" id="logout">
@@ -53,15 +53,15 @@ $bmi = $app->generateBMI($_SESSION['me']['height'], $_SESSION['me']['nowWeight']
 
     <div class="current">
       <div class="current-title text-center">
-        <h3 class="section-title">現在の<?php echo h($_SESSION['me']['name'])?>さん</h3>
+        <h3 class="section-title">現在の<?= h($_SESSION['me']['name'])?>さん</h3>
       </div>
       <div class="metabolism">
-        <h3><i class="fas fa-fire fa-lg"></i> 基礎代謝：<?php echo h($app->generateMetabolism())?>kcal</h3>
+        <h3><i class="fas fa-fire fa-lg"></i> 基礎代謝：<?= h($app->generateMetabolism())?>kcal</h3>
         <p>生命の維持だけに必要なエネルギー量です。プラスで自身の活動レベル（運動など）に合わせて摂取しましょう。</p>
       </div>
       <div class="bmi">
-        <h3><i class="fas fa-heartbeat"></i> BMI：<?php echo h($bmi)?></h3>
-        <p><?php echo h($app->diagnosisBMI($bmi))?></p>
+        <h3><i class="fas fa-heartbeat"></i> BMI：<?= h($bmi)?></h3>
+        <p><?= h($app->diagnosisBMI($bmi))?></p>
         <p class="bmi-description">BMIとは？</p>
         <p>身長と体重から算出される肥満度を示す数値です。数値が高いほど肥満の傾向があり低いほど痩せ型であることを意味します。最も病気のリスクが低く健康的なBMIは「２２」とされています。</p>
       </div>

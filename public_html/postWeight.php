@@ -28,7 +28,7 @@ $app->run();
         </div>
         <div class="header-right d-flex justify-content-end col-xs-12 col-md-6">
           <div class="login-user col-xs-8">
-            <p><i class="fas fa-user"></i><a href="userShow.php"> <?php echo $_SESSION['me']['name'] ?></a></p>
+            <p><i class="fas fa-user"></i><a href="userShow.php"> <?php echo h($_SESSION['me']['name']) ?></a></p>
           </div>
           <div class="logout col-xs-4">
             <form action="logout.php" method="post" id="logout">
@@ -48,7 +48,7 @@ $app->run();
       <div class="post-weight-form text-center row d-flex justify-content-center">
         <div class="today-height row">
           <p class="col-md-6 post-heading">現在の体重（kg）</p>
-          <input class="col-md-6"type="text" name="nowWeight"  value="<?php echo $_SESSION['me']['nowWeight'] ?>">
+          <input class="col-md-6"type="text" name="nowWeight"  value="<?php echo h($_SESSION['me']['nowWeight']) ?>">
           <p class="err"><?= h($app->getErrors('nowWeight'));?></p>
         </div>
       </div>

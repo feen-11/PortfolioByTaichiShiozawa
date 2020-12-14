@@ -28,7 +28,7 @@ $app->run();
         </div>
         <div class="header-right d-flex justify-content-end col-xs-12 col-md-6">
           <div class="login-user col-xs-8">
-            <p><i class="fas fa-user"></i><a href="userShow.php"> <?php echo $_SESSION['me']['name'] ?></a></p>
+            <p><i class="fas fa-user"></i><a href="userShow.php"> <?php echo h($_SESSION['me']['name']) ?></a></p>
           </div>
           <div class="logout col-xs-4">
             <form action="logout.php" method="post" id="logout">
@@ -61,12 +61,12 @@ $app->run();
         </div>
         <div class="food-name row d-felx justify-content-center">
           <p class="post-heading col-md-6">食べたもの</p>
-          <input class="col-md-6" type="text" name="foodName" placeholder="食べたもの" value="<?= isset($app->getValues()->foodName) ? $app->getValues()->foodName : '' ?>">
+          <input class="col-md-6" type="text" name="foodName" placeholder="食べたもの" value="<?= isset($app->getValues()->foodName) ? h($app->getValues()->foodName) : '' ?>">
           <p class="err"><?= h($app->getErrors('food'));?></p>
         </div>
         <div class="food-calorie row d-flex justify-content-center">
           <p class="post-heading col-md-6">カロリー</p>
-          <input class="col-md-6" type="text" name="intakeCalorie" placeholder="摂取カロリー" value="<?= isset($app->getValues()->intakeCalorie) ? $app->getValues()->intakeCalorie : '' ?>">
+          <input class="col-md-6" type="text" name="intakeCalorie" placeholder="摂取カロリー" value="<?= isset($app->getValues()->intakeCalorie) ? h($app->getValues()->intakeCalorie) : '' ?>">
           <p class="err"><?= h($app->getErrors('intakeCalorie'));?></p>
         </div>
       </div>

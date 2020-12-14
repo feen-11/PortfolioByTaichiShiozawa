@@ -43,8 +43,8 @@ $app->run();
           <form action="" method="post" id="login" >
             <div class="row email">
               <p class="my-auto col-sm-12 col-md-4"><i class="far fa-envelope fa-lg"></i> メールアドレス</p>
-              <input class="col-sm-12 col-md-8" type="text" name="email" placeholder="your@example.com" value="<?= isset($app->getValues()->email) ? $app->getValues()->email : '' ?>">
-              <p class="err"><?= h($app->getErrors('email'));?></p>
+              <input class="col-sm-12 col-md-8" type="text" name="email" placeholder="your@example.com" value="<?= isset($app->getValues()->email) ? h($app->getValues()->email : '' ?>">
+              <p class="err")><?= h($app->getErrors('email'));?></p>
             </div>
             <div class="row password">
               <p class="my-auto col-sm-12 col-md-4"><i class="fas fa-lock fa-lg"></i> パスワード</p>

@@ -28,7 +28,7 @@ $app->run();
         </div>
         <div class="header-right d-flex justify-content-end col-xs-12 col-md-6">
           <div class="login-user col-xs-8">
-            <p><i class="fas fa-user"></i><a href="userShow.php"> <?php echo h($_SESSION['me']['name']) ?></a></p>
+            <p><i class="fas fa-user"></i><a href="userShow.php"> <?= h($_SESSION['me']['name']) ?></a></p>
           </div>
           <div class="logout col-xs-4">
             <form action="logout.php" method="post" id="logout">
@@ -43,7 +43,7 @@ $app->run();
 
   <main>
     <div class="post-food container">
-    <h3 class="heading text-center"><?php echo date('Y年m月d日') ?>の食事</h3>
+    <h3 class="heading text-center"><?= date('Y年m月d日') ?>の食事</h3>
     <div class="post-form text-center">
       <form action="" method="post" id="food">
         <p class="post-heading">食べた時間帯</p>

@@ -115,6 +115,108 @@ class Post extends Model{
     $user = $stmt->fetch(\PDO::FETCH_ASSOC);
     $_SESSION['me'] = $user;
   }
+  
+  public function postFoodSample(){
+    $res = $this -> checkFoodSample();
+    if($res === false){
+      $sql = "insert into food (foodName, calorie, created, updated, userId) values ('', 0, now(), now(), :userId)";
+        $stmt = $this->dbh->prepare($sql);
+        $res = $stmt->execute([
+          ':userId' => $_SESSION['me']['userId']
+        ]);
+    }else{
+      return;
+    }
+  }
+  public function postTrainingSample(){
+    $res = $this -> checkTrainingSample();
+    if($res === false){
+      $sql = "insert into training (trainingName, burnCalorie, created, updated ,userId) values ('', 0, now(), now(), :userId)";
+        $stmt = $this->dbh->prepare($sql);
+        $res = $stmt->execute([
+          ':userId' => $_SESSION['me']['userId']
+        ]);
+    }
+    else{
+      return;
+    }
+
+  }
+
+  public function checkFoodSample(){
+    $sql = "select foodName from food where foodName = '' and created = :created and userId = :userId ";
+    $stmt = $this->dbh->prepare($sql);
+    $stmt->execute([
+      ':created' => date('Y-m-d'),
+      ':userId' => $_SESSION['me']['userId']
+      ]);
+    $res = $stmt->fetch(\PDO::FETCH_ASSOC);
+    return $res;
+  }
+
+  public function checkTrainingSample(){
+    $sql = "select trainingName from training where trainingName = '' and created = :created and userId = :userId ";
+    $stmt = $this->dbh->prepare($sql);
+    $stmt->execute([
+      ':created' => date('Y-m-d'),
+      ':userId' => $_SESSION['me']['userId']
+      ]);
+    $res = $stmt->fetch(\PDO::FETCH_ASSOC);
+    return $res;
+  }
+
+  public function readDetailedFood($id){
+    $sql = "select * from food where foodId = :id";
+    $stmt = $this->dbh->prepare($sql);
+    $stmt->execute([
+      ':id' => $id
+    ]);
+    return $stmt->fetch(\PDO::FETCH_ASSOC);
+  }
+  public function readDetailedTraining($id){
+    $sql = "select * from training where trainingId = :id";
+    $stmt = $this->dbh->prepare($sql);
+    $stmt->execute([
+      ':id' => $id
+    ]);
+    return $stmt->fetch(\PDO::FETCH_ASSOC);
+  }
+
+  public function editFood($id){
+    $sql = "update food set timeflame = :timeflame, foodName = :foodName, calorie = :calorie, updated = now() where foodId = :foodId";
+    $stmt = $this->dbh->prepare($sql);
+    $stmt->execute([
+      ':timeflame' => $_POST['timeflame'],
+      ':foodName' => $_POST['foodName'],
+      ':calorie' => $_POST['intakeCalorie'],
+      ':foodId' => $id
+    ]);
+  }
+
+  public function deleteFood($id){
+    $sql = "delete from food where foodId = :id";
+    $stmt = $this->dbh->prepare($sql);
+    $stmt->execute([
+      ':id' => $id
+    ]);
+  }
+  public function editTraining($id){
+    $sql = "update training set trainingName = :trainingName, burnCalorie = :burnCalorie, updated = now() where trainingId = :trainingId";
+    $stmt = $this->dbh->prepare($sql);
+    $stmt->execute([
+      ':trainingName' => $_POST['trainingName'],
+      ':burnCalorie' => $_POST['burnCalorie'],
+      ':trainingId' => $id
+    ]);
+  }
+
+  public function deleteTraining($id){
+    $sql = "delete from training where trainingId = :id";
+    $stmt = $this->dbh->prepare($sql);
+    $stmt->execute([
+      ':id' => $id
+    ]);
+  }
 
  
 } 
